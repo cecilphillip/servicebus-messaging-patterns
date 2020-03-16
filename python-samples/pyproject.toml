@@ -6,6 +6,7 @@ authors = ["cecilphillip <cecilphillip@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
+azure-servicebus = "^0.50.2"
 
 [tool.poetry.dev-dependencies]
 pulumi = "^1.12.1"
