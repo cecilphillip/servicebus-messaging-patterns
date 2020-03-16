@@ -1,0 +1,3 @@
+name: servicebus-messaging-samples
+runtime: python
+description: A collection of samples for programatically interacting with Azure
