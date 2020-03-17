@@ -8,7 +8,7 @@ sender_constr = os.environ['SENDER_CONNECTION_STR']
 
 
 async def main(count: int):
-    queue_client = QueueClient.from_connection_string(
+    queue_client: QueueClient = QueueClient.from_connection_string(
         sender_constr, 'simplequeue')
     msg = Message(body='This is the message content')
 

@@ -9,14 +9,13 @@ receiver_constr = os.environ['RECEIVER_CONNECTION_STR']
 
 async def process_message(message: Message):
     print(message)
-    print(f'Message ID: {message.properties.message_id} \n'
-          f'{message.properties.group_sequence} \n'
-          f'{message.properties.creation_time} \n'
-          f'Content Type: {message.properties.content_type} \n'
-          )
+    print('~~~~Properties~~~~')
+    print(dir(message.properties))
+    for prop, propv in message.properties.__dict__.items():
+        print(f'{prop} : {propv}')
+    print()
 
-    # message.Size,
-    # await message.complete()
+    await message.complete()
 
 
 async def main():
